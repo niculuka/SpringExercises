@@ -1,4 +1,4 @@
-package com.example.SpringExercises.ex6;
+package com.example.SpringExercises.ex6_onSetter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;

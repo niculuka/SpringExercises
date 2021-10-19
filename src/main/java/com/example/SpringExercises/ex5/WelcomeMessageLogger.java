@@ -10,13 +10,19 @@ import org.springframework.stereotype.Component;
 public class WelcomeMessageLogger implements CommandLineRunner {
 
     private String text;
+    private int number;
     private Boolean shouldLog;
 
     public WelcomeMessageLogger(
-            @Value("${pl.sdacademy.welcome.text.value}") String text,
-            @Value("${pl.sdacademy.welcome.text.enable}") Boolean shouldLog
+            @Value("${pl.sdacademy.welcome.text.value}")
+            String text,
+            @Value("${pl.sdacademy.welcome.text.number}")
+            int number,
+            @Value("${pl.sdacademy.welcome.text.enable}")
+            Boolean shouldLog
     ) {
         this.text = text;
+        this.number = number;
         this.shouldLog = shouldLog;
     }
 
@@ -24,6 +30,7 @@ public class WelcomeMessageLogger implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if (Boolean.TRUE.equals(shouldLog)) {
             log.info("Text: " + text);
+            log.info("Number: " + number);
             log.info("Should Log: " + shouldLog);
         }
 

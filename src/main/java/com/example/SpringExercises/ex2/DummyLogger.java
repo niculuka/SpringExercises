@@ -5,8 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-@Component
 @Slf4j
+@Component
 public class DummyLogger {
 
     public void sayHello() {
